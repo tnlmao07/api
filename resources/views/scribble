@@ -1,0 +1,8 @@
+$task=new Task;
+       $task->name=$request->name;
+       $task->description->$request->description;
+        if($task->save()){
+            return response()->json(["msg"=>"Task Added"]);
+        }else{
+            return response()->json(["msg"=>"Task Not Added"]);
+        }
